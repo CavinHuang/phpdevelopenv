@@ -54,18 +54,18 @@ docker-compose up php nginx php
 
 ## Q & A
 1、无法远程连接mysql
-    1> docker ps 查看mysql的容器id
-    2> docker -i -t 容器ID bash
-    3> mysql -uroot -p #进入mysql
-    4> ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY '123456'; # 赋予root账户远程权限
+ - 1> docker ps 查看mysql的容器id
+ - 2> docker -i -t 容器ID bash
+ - 3> mysql -uroot -p #进入mysql
+ - 4> ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY '123456'; # 赋予root账户远程权限
 
 2、更改配置去哪里改？
     所有的配置都在`config`目录下
    
 3、新建项目怎么操作
-    1> 在`apps`目录下新建项目        
-    2> 在`config/ngnix/conf.d/`下建立相应的conf文件
-    3> 加入需要暴露新的端口到本地，请在vagrantfile中添加
+  - 1> 在`apps`目录下新建项目        
+  - 2> 在`config/ngnix/conf.d/`下建立相应的conf文件
+  - 3> 加入需要暴露新的端口到本地，请在vagrantfile中添加
     
 ## 资料   
 
